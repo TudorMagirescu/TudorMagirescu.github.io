@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Imports */
+
+/* Variables */
+:root {
+    --primary-color: #4ea81e;
+    --secondary-color: #C9D46C;
+    --light-color: #E9EFC0;
+    --orange1: #E48716;
+    --orange2: #FAAB01;
+    --pink1: #DFBCB2;
+
+    --font-family: monospace;
+    --font-size: 20px;
+
+    --topbar-height: 80px;
+
+    --main-padding: 1rem;
+    --topbar-padding: 10px;
+}
+
+/* Main */
+.topbar {
+    top: 0;
+    position: fixed;
+    background-color: var(--primary-color);
+
+    width: 100%;
+    height: var(--topbar-height);
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    padding: var(--main-padding);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--orange2);
+
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 34px 5px rgba(0, 0, 0, 0.75);
+
+}
+
+.topbar img {
+    display: block;
+}
+
+.logotext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+main {
+    margin-top: var(--topbar-height);
+    padding: var(--main-padding) 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.75);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    background-color: red;
+
+    text-align: center;
+    font-size: 30px;
+}

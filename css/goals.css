@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #4ea81e;
+    --secondary-color: #C9D46C;
+    --light-color: #E9EFC0;
+    --orange1: #E48716;
+    --orange2: #FAAB01;
+    --pink1: #DFBCB2;
+    --pink2: rgb(196, 157, 148);
+
+    --font-family: monospace;
+    --font-size: 20px;
+}
+
+.goal-card {
+
+    width: 500px;
+    height: 700px;
+
+    margin: auto;
+    background-color: transparent;
+}
+
+.goal-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.goal-card:hover .goal-card-inner {
+    transform: rotateY(180deg) scale(1);
+}
+
+.goal-card:not(hover) .goal-card-inner {
+    transform: scale(0.8);
+}
+
+.goal-card-front,
+.goal-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: transparent; */
+    background: linear-gradient(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0.4));
+
+    box-shadow: 0px 0px 34px 5px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    padding: 15px;
+
+    /* overflow-y: scroll; */
+}
+
+.goal-card-back {
+    transform: rotateY(180deg);
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 22px;
+}
+
+h3 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    color: var(--orange2);
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+
+.goal-card-back h3::first-letter {
+    font-size: 30px;
+    color: var(--orange1);
+    font-family: var(--font-family);
+}
+
+.smart {
+    padding: 0rem 0rem 0px 1rem;
+}
+
+.target-element {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.target {
+    width: 70%;
+    align-self: center;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 15px;
+}
+
+.progress-div {
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.progress-done,
+.progress-slider {
+    justify-content: center;
+    align-items: center;
+}
+
+.done-button {
+    width: 70%;
+    height: 60%;
+
+    background-color: var(--orange2);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+}
+
+.done-button:hover {
+    background-color: var(--orange1);
+}
+
+.progress-counter {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.increase-decrease-button, .add-target-button{
+    width: 30%;
+    height: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--orange2);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.increase-decrease-button:hover, .add-target-button:hover {
+    background-color: var(--orange1);
+}
+
+.counter {
+    font-size: 1.5rem;
+}
+
+.slider-element {
+    width: 70%;
+}
+
+.monetary-progress {
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+}
+
+.add-target {
+    height: 140px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.add-target-textarea {
+    height: 90%;
+    width: 95%;
+    resize: none;
+}
+
+.add-target-textarea-container {
+    width: 70%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#target-type {
+    width: 100%;
+    height: 30%;
+    align-self: center;
+}
+
+.add-target-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: absolute;
+
+    height: 70%;
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.goal-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal-title {
+    font-size: 24px;
+}
+
+.progress-title {
+    margin-top: 10px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.add-new-goal::first-letter {
+    font-size: 30px;
+}
+
+input {
+    width: 30%;
+    height: 55%;
+    background: rgb(240, 240, 240);
+    font-family: var(--font-family);
+    font-size: 15px;
+    border: 0.5px solid gray;
+}
+textarea {
+    border-radius: 2px;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: 15px;
+
+    background: transparent;
+    padding: 5px;
+    border: 0.5px solid gray;
+    width: 90%;
+    height: 5%;
+    resize: none;
+}
+.add-goal-p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--orange1)
+}
+.goal-card-back {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-goal-button {
+    width: 50%;
+    height: 40px;
+    background-color: var(--orange2);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+}
+.add-goal-button:hover {
+    background-color: var(--orange1);
+}
