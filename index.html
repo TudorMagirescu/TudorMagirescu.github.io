@@ -31,33 +31,44 @@
             <h1>Sign up now!</h1>
             <br>
             <form>
-                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="text" id="username-sign-up" name="username" placeholder="Username*" required minlength="5" maxlength="12">
+                <span></span>
+                
 
-                <input type="text" id="password" name="password" placeholder="Password">
+                <input type="password" id="password-sign-up" name="password" placeholder="Password*" required minlength="12">
+                <span></span>
 
-                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="name" name="name" placeholder="Name*" required>
+                <span></span>
 
                 <input type="text" id="address" name="address" placeholder="Address">
+                <span></span>
 
-                <input type="text" id="country" name="country" placeholder="Country">
+                <input type="text" id="country" name="country" placeholder="Country*" required>
+                <span></span>
 
-                <input type="text" id="zip" name="zip" placeholder="ZIP">
+                <input type="text" id="zip" name="zip" placeholder="ZIP*" required minlength="6" maxlength="6">
+                <span></span>
 
-                <input type="text" id="email" name="email" placeholder="Email" style="width: 100%; display: block;">
+                <input type="email" id="email" name="email" placeholder="Email*" style="width: 80%; display: block;" required>
+                <span></span>
 
-                <select name="gender" id="gender">
-                    <option value="" disabled selected hidden>Gender</option>
+                <select name="gender" id="gender" required>
+                    <option value="" disabled selected hidden>Gender*</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
+                <span></span>
 
-                <input type="text" id="language" name="language" placeholder="Language">
+                <input type="text" id="language" name="language" placeholder="Language*" required>
+                <span></span>
 
-                <textarea name="bio" id="bio" style="width: 100%; height: 25%; display:block;"
+                <textarea name="bio" id="bio" style="width: 80%; height: 25%; display:block;"
                     placeholder="Please write a short description of yourself"></textarea>
+                <span></span>
 
-                <button type="button" class="button">Sign up</button>
+                <button type="submit" class="button">Sign up</button>
             </form>
         </div>
 
@@ -66,19 +77,23 @@
             <br>
             <form>
                 
-                <input type="text" id="username" name="username" placeholder="Username"><br>
-                <input type="password" id="password" name="password" placeholder="Password"><br>
+                <input type="text" id="username-sign-in" name="username" placeholder="Username" placeholder="Username*" required minlength="5" maxlength="12"><br>
+                <input type="password" id="password-sign-in" name="password" placeholder="Password" required minlength="12"><br>
 
+                <br>
+    
+                <button type="submit" class="button">
+                    <a href="home.html">Login</a>
+                </button>
             </form>
-            <br>
-
-            <button type="button" class="button">
-                <a href="home.html">Login</a>
-            </button>
 
         </div>
 
     </section>
+
+    <script>
+        console.log(5);
+    </script>
 
 
 </body>
