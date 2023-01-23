@@ -31,7 +31,7 @@ form {
     justify-content: center;
     flex-wrap: wrap;
     padding-inline: 50px;
-    gap: 1em;  /* Change this to make it responsive maybe */
+    gap: 1em;
 }
 
 input:invalid, textarea:invalid, select:invalid {
