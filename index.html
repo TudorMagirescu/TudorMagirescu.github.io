@@ -30,11 +30,10 @@
         <div class="rectangle">
             <h1>Sign up now!</h1>
             <br>
-            <form>
+            <form id="sign-up-form">
                 <input type="text" id="username-sign-up" name="username" placeholder="Username*" required minlength="5" maxlength="12">
                 <span></span>
                 
-
                 <input type="password" id="password-sign-up" name="password" placeholder="Password*" required minlength="12">
                 <span></span>
 
@@ -68,7 +67,7 @@
                     placeholder="Please write a short description of yourself"></textarea>
                 <span></span>
 
-                <button type="submit" class="button">Sign up</button>
+                <button id="sign-up-button" type="submit" class="button">Sign up</button>
             </form>
         </div>
 
@@ -91,9 +90,7 @@
 
     </section>
 
-    <script>
-        console.log(5);
-    </script>
+    <script src="js/form-alert.js"></script>
 
 
 </body>
