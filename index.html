@@ -89,14 +89,14 @@
                     <div style="width: 2.5%; margin-right: 1.25%" class="cross-tick-div"><span class="cross-tick" id="bio-cross-tick"></span></div>
                 </div>
 
-                <button id="sign-up-button" type="submit" class="button" onclick="displayTracking()">Sign up</button>
+                <button id="sign-up-button" type="submit" class="button">Sign up</button>
             </form>
         </div>
 
         <div class="rectangle">
             <h1>Already have an account?</h1>
             <br>
-            <form>
+            <form onsubmit="redirect()">
                 
                 <div class="sign-up-form-div">
                     <input type="text" id="username-sign-in" name="username" placeholder="Username" placeholder="Username*"><br>
@@ -116,7 +116,6 @@
         </div>
 
     </section>
-
     <script src="js/form-validate.js"></script>
     <script src="js/events.js"></script>
 
