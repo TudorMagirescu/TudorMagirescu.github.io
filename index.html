@@ -94,7 +94,7 @@
         <div class="rectangle">
             <h1>Already have an account?</h1>
             <br>
-            <form>
+            <form onsubmit="validateLogin()">
                 
                 <div class="sign-up-form-div">
                     <input type="text" id="username-sign-in" name="username" placeholder="Username" placeholder="Username*" required minlength="5" maxlength="12"><br>
@@ -107,7 +107,7 @@
                 <br>
                 
                 <button type="submit" class="button">
-                    <a href="home.html">Login</a>
+                    <a>Login</a>
                 </button>
             </form>
 
@@ -115,6 +115,11 @@
 
     </section>
 
+    <script>
+        function validateLogin() {
+            setTimeout(function() {window.location = "home.html"});
+        }
+    </script>
     <script src="js/form-alert.js"></script>
 
 
