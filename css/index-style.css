@@ -30,20 +30,75 @@ form {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-inline: 50px;
-    gap: 1em;
+    padding-inline: 40px;
+}
+
+.sign-up-form-div {
+    width: 50%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-bottom: 15px; 
+    justify-content: space-between;
+}
+
+/* input:invalid, textarea:invalid, select:invalid {
+    border-color: rgb(255, 0, 0);
+}
+
+input:valid, textarea:valid, select:valid {
+    border-color: rgb(0, 180, 0);
+} */
+
+input:invalid + div .cross-tick::before {
+    font-size: 12px;
+    content: "✖";
+    color: red;
+}
+
+input:valid + div .cross-tick::before {
+    font-size: 12px;
+    content: "✔";
+    color: rgb(0, 180, 0);
+}
+
+select:invalid + div .cross-tick::before {
+    font-size: 12px;
+    content: "✖";
+    color: red;
+}
+
+select:valid + div .cross-tick::before {
+    font-size: 12px;
+    content: "✔";
+    color: rgb(0, 180, 0);
+}
+
+textarea:invalid + div .cross-tick::before {
+    font-size: 12px;
+    content: "✖";
+    color: red;
+}
+
+textarea:valid + div .cross-tick::before {
+    font-size: 12px;
+    content: "✔";
+    color: rgb(0, 180, 0);
+}
+
+.cross-tick-div {
+    width: 5%;
+    margin-right: 2.5%;
 }
 
 input,
 textarea,
 select {
-    width: 40%;
-    flex-grow: 1;
+    width: 90%;
     border-radius: 2px;
     outline: none;
     background: rgb(240, 240, 240);
     padding: 5px;
-    border: 0.5px solid gray;
+    border: 1px solid gray;
 }
 
 textarea {

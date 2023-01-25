@@ -30,34 +30,64 @@
         <div class="rectangle">
             <h1>Sign up now!</h1>
             <br>
-            <form>
-                <input type="text" id="username" name="username" placeholder="Username">
+            <form id="sign-up-form">
+                <div class="sign-up-form-div" id="sign-up-username-div">
+                    <input type="text" id="sign-up-username-input" name="username" placeholder="Username*">
+                    <div class="cross-tick-div"><p class="cross-tick"></p></div>
+                </div>
+                
+                <div class="sign-up-form-div" id="sign-up-password-div">
+                    <input type="password" id="sign-up-password-input" name="password" placeholder="Password*">
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="password" name="password" placeholder="Password">
+                <div class="sign-up-form-div" id="sign-up-name-div">
+                    <input type="text" id="sign-up-name-input" name="name" placeholder="Name*">
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="name" name="name" placeholder="Name">
+                <div class="sign-up-form-div" id="sign-up-address-div">
+                    <input type="text" id="sign-up-address-input" name="address" placeholder="Address">
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="address" name="address" placeholder="Address">
+                <div class="sign-up-form-div" id="sign-up-country-div">
+                    <input type="text" id="sign-up-country-input" name="country" placeholder="Country*">
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="country" name="country" placeholder="Country">
+                <div class="sign-up-form-div" id="sign-up-zip-div">
+                    <input type="text" id="sign-up-zip-input" name="zip" placeholder="ZIP*">
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="zip" name="zip" placeholder="ZIP">
+                <div class="sign-up-form-div" style="width: 100%" id="sign-up-email-div">
+                    <input type="email" id="sign-up-email-input" name="email" placeholder="Email*" style="width: 95%;">
+                    <div style="width: 2.5%; margin-right: 1.25%" class="cross-tick-div"><span  class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="email" name="email" placeholder="Email" style="width: 100%; display: block;">
+                <div class="sign-up-form-div" id="sign-up-gender-div">
+                    <select name="gender" id="sign-up-gender-input">
+                        <option value="" disabled selected hidden>Gender*</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <select name="gender" id="gender">
-                    <option value="" disabled selected hidden>Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
+                <div class="sign-up-form-div" id="sign-up-language-div">
+                    <input type="text" id="sign-up-language-input" name="language" placeholder="Language*">
+                    <div class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <input type="text" id="language" name="language" placeholder="Language">
+                <div class="sign-up-form-div" style="width: 100%; height: 30%" id="sign-up-bio-div">
+                    <textarea name="bio" id="sign-up-bio-input" style="width: 95%; display:block;"
+                        placeholder="Please write a short description of yourself"></textarea>
+                    <div style="width: 2.5%; margin-right: 1.25%" class="cross-tick-div"><span class="cross-tick"></span></div>
+                </div>
 
-                <textarea name="bio" id="bio" style="width: 100%; height: 25%; display:block;"
-                    placeholder="Please write a short description of yourself"></textarea>
-
-                <button type="button" class="button">Sign up</button>
+                <button id="sign-up-button" type="submit" class="button">Sign up</button>
             </form>
         </div>
 
@@ -66,19 +96,26 @@
             <br>
             <form>
                 
-                <input type="text" id="username" name="username" placeholder="Username"><br>
-                <input type="password" id="password" name="password" placeholder="Password"><br>
+                <div class="sign-up-form-div">
+                    <input type="text" id="username-sign-in" name="username" placeholder="Username" placeholder="Username*"><br>
+                </div>
 
+                <div class="sign-up-form-div">
+                    <input type="password" id="password-sign-in" name="password" placeholder="Password"><br>
+                </div>
+
+                <br>
+                
+                <button type="submit" class="button">
+                    <a href="home.html">Login</a>
+                </button>
             </form>
-            <br>
-
-            <button type="button" class="button">
-                <a href="home.html">Login</a>
-            </button>
 
         </div>
 
     </section>
+
+    <script src="js/form-validate.js"></script>
 
 
 </body>
