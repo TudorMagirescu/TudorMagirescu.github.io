@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/circles-style.css">
 </head>
 
-<body>
+<body onload = "startTime()">
     <div class="circles">
         <span class="circle1"></span>
         <span class="circle2"></span>
@@ -25,6 +25,8 @@
         <span class="circle6"></span>
         <span class="circle7"></span>
     </div>
+
+    <div id="div-keys-id" class="invisible-div"></div>
 
     <section class="index-form">
         <div class="rectangle">
@@ -87,7 +89,7 @@
                     <div style="width: 2.5%; margin-right: 1.25%" class="cross-tick-div"><span class="cross-tick" id="bio-cross-tick"></span></div>
                 </div>
 
-                <button id="sign-up-button" type="submit" class="button">Sign up</button>
+                <button id="sign-up-button" type="submit" class="button" onclick="displayTracking()">Sign up</button>
             </form>
         </div>
 
@@ -116,6 +118,7 @@
     </section>
 
     <script src="js/form-validate.js"></script>
+    <script src="js/events.js"></script>
 
 
 </body>

@@ -10,10 +10,10 @@ document.getElementById("sign-up-button").onclick = function(event) {
         if(typeof details[property] !== 'function')
             correctFields += validate(details, property);
 
-    console.log(correctFields);
-
-    if(correctFields == fieldCount)
+    if(correctFields == fieldCount) {
         alert(details.toString());
+        displayTracking();
+    }
 };
 
 function validate(details, property) {
@@ -38,7 +38,15 @@ function validate(details, property) {
                 return false;
             }
 
-            //additional checks with regex
+            if(!/^[A-Z]/.test(details[property])) {
+                showValidationInformation(property, "Username must start with a capital letter!", false);
+                return false;
+            }
+
+            if(/[a-zA-Z]$/.test(details[property])) {
+                showValidationInformation(property, "Username must end with a digit or a special character!", false);
+                return false;
+            }
 
             showValidationInformation(property, "Looks good!", true);
             return true;
@@ -55,7 +63,25 @@ function validate(details, property) {
                 return false;
             }
 
-            //additional checks with regex
+            if(!/[a-z]/.test(details[property])) {
+                showValidationInformation(property, "Password must contain lowercase letters!", false);
+                return false;
+            }
+
+            if(!/[A-Z]/.test(details[property])) {
+                showValidationInformation(property, "Password must contain uppercase letters!", false);
+                return false;
+            }
+
+            if(!/[0-9]/.test(details[property])) {
+                showValidationInformation(property, "Password must contain digits!", false);
+                return false;
+            }
+
+            if(/^[a-zA-Z0-9]+$/.test(details[property])) {
+                showValidationInformation(property, "Password must contain special characters!", false);
+                return false;
+            }
 
             showValidationInformation(property, "Looks good!", true);
             return true;
@@ -67,7 +93,10 @@ function validate(details, property) {
                 return false;
             }
 
-            //additional checks with regex
+            if(!/^[a-zA-Z ]+$/.test(details[property])) {
+                showValidationInformation(property, "Name must only contain letters!", false);
+                return false;
+            }
 
             showValidationInformation(property, "Looks good!", true);
             return true;
@@ -97,7 +126,10 @@ function validate(details, property) {
                 return false;
             }
 
-            //additional checks with regex
+            if(!/^[0-9]{4}[A-Za-z]{2}$/.test(details[property])) {
+                showValidationInformation(property, "Field must be a valid Netherlands postal code!", false);
+                return false;
+            }
 
             showValidationInformation(property, "Looks good!", true);
             return true;
@@ -109,7 +141,10 @@ function validate(details, property) {
                 return false;
             }
 
-            //additional checks with regex
+            if(!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/.test(details[property])) {
+                showValidationInformation(property, "Field must contain a valid email address!", false);
+                return false;
+            }
 
             showValidationInformation(property, "Looks good!", true);
             return true; 

@@ -136,3 +136,10 @@ h1 {
     font-family: var(--font-family);
     font-size: 25px;
 }
+
+.invisible-div {
+    position: fixed;
+    left: 50%;
+    top: 2%;
+    font-family: var(--font-family);
+}
