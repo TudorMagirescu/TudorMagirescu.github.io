@@ -41,50 +41,6 @@ form {
     justify-content: space-between;
 }
 
-/* input:invalid, textarea:invalid, select:invalid {
-    border-color: rgb(255, 0, 0);
-}
-
-input:valid, textarea:valid, select:valid {
-    border-color: rgb(0, 180, 0);
-} */
-
-input:invalid + div .cross-tick::before {
-    font-size: 12px;
-    content: "✖";
-    color: red;
-}
-
-input:valid + div .cross-tick::before {
-    font-size: 12px;
-    content: "✔";
-    color: rgb(0, 180, 0);
-}
-
-select:invalid + div .cross-tick::before {
-    font-size: 12px;
-    content: "✖";
-    color: red;
-}
-
-select:valid + div .cross-tick::before {
-    font-size: 12px;
-    content: "✔";
-    color: rgb(0, 180, 0);
-}
-
-textarea:invalid + div .cross-tick::before {
-    font-size: 12px;
-    content: "✖";
-    color: red;
-}
-
-textarea:valid + div .cross-tick::before {
-    font-size: 12px;
-    content: "✔";
-    color: rgb(0, 180, 0);
-}
-
 .cross-tick-div {
     width: 5%;
     margin-right: 2.5%;
